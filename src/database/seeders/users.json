@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rogenis Pereira",
+      "email": "Rogenisp16@gmail.com",
+      "password": "senha1234"
+    },
+    {
+      "id": 2,
+      "name": "Alessandra Falcao",
+      "email": "alessandrafalcao@gmail.com",
+      "password": "senha5678"
+    }
+  ]
+}
