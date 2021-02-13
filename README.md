@@ -1,4 +1,4 @@
-# api-pokemon
+## api-pokemon
 Repositório para o teste técnico (api-pokemon)
 
 ## Instalação
@@ -57,7 +57,7 @@ Diretórios do projeto:
 1. Migrations: As migrações são arquivos que guardam as mudanças que o banco de dados da aplicação sofre ao longo do tempo. Elas funcionam como um sistema de controle de versão do esquema do banco, e são usadas para fazer edições no esquema (criar/editar tabelas) ou para reverter edições anteriores.
 2. Models: Geração dos modelos das tabelas do banco.
 3. Seeders: A inserção de dados inicias no banco, pela qual algumas tabelas podem precisar de dados iniciais padrão para que a aplicação funcione adequadamente. 
-4. Responsavél pelos filtros e busca. 
+4. Dao: Responsavél pelos filtros e busca. 
 
 **Validações**
 
@@ -68,3 +68,7 @@ Regras:
 2. O nome do time deve ter pelo menos 5 caracteres.
 3. Não é permitido cadastro com mesmo email. 
 4. Tratamento de erros. 
+
+## Comandos
+- `make build`: Habilita todos os containers e images necessários para rodar a aplicação.
+- `make rebuild`: Desabilita os containers da aplicação, apaga os dados remanescentes e habilita novamente os containers.
