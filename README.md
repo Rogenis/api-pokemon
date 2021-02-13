@@ -38,5 +38,33 @@ Essas características nos permitem usar o Express para desenvolver qualquer tip
 4. Para a comunicação da API com o banco de dados, foi usado o **ORM (Object Relational Mapper)**, uma técnica que permite consultar e manipular dados
 de um database usando o paradigma de orientação a objetos, desta forma, o acesso aos dados não é feito através da linguagem SQL, e sim através de objetos. 
 
-5. Foi usado o **Docker**, pois com ele é possível lidar com os containers como se fossem máquinas virtuais modulares e extremamente leves. Além disso, os containers oferecem maior flexibilidade para você criar, implantar, copiar e migrar um container de um ambiente para outro. O dokcer também serve para facilitar a execução de um determinado projeto em diferentes máquinas. 
+5. Foi usado o **Docker**, pois com ele é possível lidar com os containers como se fossem máquinas virtuais modulares e extremamente leves. Além disso, os containers oferecem maior flexibilidade para você criar, implantar, copiar e migrar um container de um ambiente para outro. O docker também serve para facilitar a execução de um determinado projeto em diferentes máquinas. 
 
+## Estrutura do Projeto
+
+- Para a estrutura do projeto, foi usado o padrão de arquitetura de software **MVC (Model - Views - Controller)**. Onde cada uma destas camadas serve para proporcionar uma manutenção mais fácil e o possível reaproveitamento de classes e partes do projeto em projetos futuros.
+
+- **Model**: Camada usada para a manipulação de dados, sendo ela responsável pela leitura e escrita de dados, e também de suas validações provenientes do SGBD utilizado pela aplicação.
+- **Cotroller**: Responsavél pelas requisições dos usuários, fazendo uso dos modelos e apresentando os resultados através das views. 
+- **Views**: A camada responsavél pela interação com o usuário.
+
+Desse modo, o projeto foi dividido pelas camadas de model e controller.
+Diretórios do projeto: 
+- Routes: Responsavél pelas rotas. 
+- Config: Responsavél pela requisição com o banco de dados. (Dados de acesso ao banco) 
+- Database: Responsavél pelos modelos, migrações, associações e seeders.
+
+1. Migrations: As migrações são arquivos que guardam as mudanças que o banco de dados da aplicação sofre ao longo do tempo. Elas funcionam como um sistema de controle de versão do esquema do banco, e são usadas para fazer edições no esquema (criar/editar tabelas) ou para reverter edições anteriores.
+2. Models: Geração dos modelos das tabelas do banco.
+3. Seeders: A inserção de dados inicias no banco, pela qual algumas tabelas podem precisar de dados iniciais padrão para que a aplicação funcione adequadamente. 
+4. Responsavél pelos filtros e busca. 
+
+**Validações**
+
+- Para as validações, foram usadas as regras de validações, onde os validadores são regras usadas nos modelos (não nas
+migrações) para garantir a consistência dos dados durante a inserção e atualização dos registros. 
+Regras:
+1. Um time tem no máximo 6 Pokémons;
+2. O nome do time deve ter pelo menos 5 caracteres.
+3. Não é permitido cadastro com mesmo email. 
+4. Tratamento de erros. 
