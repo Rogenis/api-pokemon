@@ -8,6 +8,9 @@ Repositório para o teste técnico (api-pokemon)
 - Docker-compose version 1.28.2
 
 **Passos para rodar localmente**
+
+Obs: O processo do Postgres roda na porta 5432, desse modo, antes de executar os comandos abaixo, é recomendado verificar se possui algum processo  vinculado à porta 5432. Isto pode ser feito atraves do comando `lsof -i tcp:5432`, e caso tenha algum processo sendo executado, use `kill {pid}` para parar o processo. Após isso, execute os comandos abaixo:
+
 1. Instale as depedências citadas acima. 
 2. Execute o comando `make build`, dentro do diretório (Irá subir os containers).
 3. Execute o comando `make db-build`, irá construir o banco de dados. 
