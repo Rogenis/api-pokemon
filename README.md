@@ -72,3 +72,10 @@ Regras:
 ## Comandos
 - `make build`: Habilita todos os containers e images necessários para rodar a aplicação.
 - `make rebuild`: Desabilita os containers da aplicação, apaga os dados remanescentes e habilita novamente os containers.
+- `make start`: Inicializa os containers da aplicação.
+- `make stop`: Suspende os containers da aplicação.
+- `make logs`: Mostra os logs dos containers relacionados à aplicação.
+- `make db-logs`: Mostra os logs do container do banco de dados.
+- `make api-logs`: Mostra os logs do container da API.
+- `make db-migrate`: Executa as migrações do banco de dados, criando as tabelas necessárias para a aplicação.
+- `make db-seed`: Popula o banco de dados com alguns dados de teste.
