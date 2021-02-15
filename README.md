@@ -72,6 +72,9 @@ Regras:
 3. Não é permitido cadastro com mesmo email. 
 4. Tratamento de erros. 
 
+**Testes**
+- Foram feitos testes unitários usando o framework **mocha**, com o objetivo de organizar os casos de teste e executa-los. No entanto, o Mocha não verifica o comportamento do código. Desse modo, para comparar valores em um teste, foi utilizado o módulo assert do Node.js.
+
 ## Comandos
 - `make build`: Habilita todos os containers e images necessários para rodar a aplicação.
 - `make rebuild`: Desabilita os containers da aplicação, apaga os dados remanescentes e habilita novamente os containers.
