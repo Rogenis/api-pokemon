@@ -1,5 +1,5 @@
 ## api-pokemon
-Repositório para o teste técnico (api-pokemon)
+Repositório para o Teste Técnico (api-pokemon)
 
 ## Instalação
 
